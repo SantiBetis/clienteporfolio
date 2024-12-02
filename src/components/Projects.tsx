@@ -87,7 +87,7 @@ const Projects: React.FC<ProjectsProps> = ({ testMode }) => {
 
     // Componente para mostrar la información de un proyecto individual
     const ProjectCard = ({ project }: { project: Project }) => (
-        <div className="bg-[#0B5E4F] w-80 h-auto p-4 gap-2 rounded-xl flex flex-col items-center">
+        <div className="bg-[#0B5E4F] w-80 h-auto p-4 gap-2 rounded-xl  flex flex-col items-center">
             {/* Imagen del proyecto */}
             <img
                 src={project.picture}
