@@ -1,0 +1,18 @@
+---
+const { company, photo, description } = Astro.props;
+---
+
+<div class="flex items-center bg-[#0B5E4F] rounded-lg shadow-lg p-2 max-w-4xl mx-auto my-6 w-full h-32 gap-8">
+
+  <!-- Imagen -->
+  <img
+    src={photo}
+    alt={company}
+    class="w-32 h-32 object-cover rounded-md mr-6"
+  />
+  <!-- Texto -->
+  <div class="flex flex-col">
+    <h3 class="text-xl font-semibold text-[#333333] text-left">{company}</h3>
+    <p class="text-base leading-relaxed font-semibold text-[#e8e5d7] text-left">{description}</p>
+  </div>
+</div>

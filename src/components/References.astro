@@ -1,0 +1,32 @@
+---
+interface Reference {
+  name: string;
+  relationship: string;
+  profession: string;
+  photo: string;
+  description: string;
+}
+
+const references: Reference[] = Astro.props.references || [];
+---
+
+<section id="references" class="flex flex-col items-center my-16">
+  {references.length > 0 ? (
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-12 w-auto max-w-5xl px-4">
+      {references.map((reference) => (
+        <div class="p-6 flex flex-col items-center text-center">
+          <img
+            src={reference.photo}
+            alt={reference.name}
+            class="w-40 h-40 rounded-full object-cover mb-4"
+          />
+          <h3 class="text-2xl font-semibold text-[#333333]">{reference.name}</h3>
+          <p class="mt-4 text-sm text-[#333333]">{reference.relationship} • {reference.profession}</p>
+          <p class="mt-4 text-[#333333] text-base">{reference.description}</p>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <p class="text-[#333333]">No references available to display.</p>
+  )}
+</section>
