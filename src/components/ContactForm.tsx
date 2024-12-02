@@ -119,7 +119,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={!!errors.name || !!errors.email || !!errors.message}
-        className="w-full bg-[#71867F] text-[#333333]  py-2 rounded-md hover:bg-[#537469] disabled:bg-gray-400 transition-all"
+        className="w-full bg-[#71867F] text-[#333333]  py-2 rounded-md hover:bg-[#3f5a51] disabled:bg-gray-400 transition-all"
       >
         Send Message
       </button>
