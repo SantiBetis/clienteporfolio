@@ -1,0 +1,28 @@
+---
+const { title = "Portfolio", layoutLang  } = Astro.props;
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-[#e8e5d7] font-sans">
+    <!-- Barra de navegación -->
+    <Navbar />
+
+    <!-- Contenido principal -->
+    <main>
+      <slot/> <!-- Aquí irá el contenido específico de cada sección -->
+    </main>
+
+    <!-- Pie de página -->
+    <Footer />
+  </body>
+</html>

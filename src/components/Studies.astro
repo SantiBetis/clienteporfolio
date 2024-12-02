@@ -1,0 +1,30 @@
+---
+const { title, school, description, imageSrc, years } = Astro.props;
+---
+
+
+<div class="relative flex flex-col align-middle items-start gap-12  pl-4 pb-8">
+
+
+  <!-- Años -->
+  <p class="text-sm text-gray-500 font-medium">{years}</p>
+
+  <!-- Contenido principal -->
+  <div class="flex items-start w-full gap-4">
+    <!-- Imagen -->
+    <img
+      src={imageSrc}
+      alt={`Logo de ${school}`}
+      class="w-14 h-14 object-contain"
+      loading="lazy"
+    />
+
+    <!-- Texto -->
+     
+    <div class="flex flex-col gap-2">
+      <h3 class="text-xl font-bold text-gray-800">{title}</h3>
+      <p class="text-base font-semibold text-gray-600">{school}</p>
+      <p class="text-base text-gray-700 mt-1">{description}</p>
+    </div>
+  </div>
+</div>

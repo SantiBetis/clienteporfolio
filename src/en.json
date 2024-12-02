@@ -1,0 +1,110 @@
+{
+    "aboutMe": [
+      {
+        "title": "About me",
+        "name": "Santiago Pérez Olivares",
+        "photo": "../public/foto-santi.png",
+        "profession": "Software Developer",
+        "description": "Hello! I'm Santiago Pérez Olivares, a second-year student specializing in Digital Design and Web Development. I am passionate about combining creativity and technology to create innovative digital experiences."
+      }
+    ],
+    "studies": [
+      {
+        "degree": "Science and Technology Baccalaureate (2020-2023)",
+        "school": "IES Néstor Almendros (Tomares, Seville)",
+        "description": "Focused especially on everything related to the field of Science.",
+        "image": "../public/nestor-almendros.png"
+      },
+      {
+        "degree": "Higher technician in Digital design and Web Development (2023-2025)",
+        "school": "Santa Joaquina de Vedruna (Seville)",
+        "description": "Develop, implement, and maintain web applications.",
+        "image": "../public/vedruna.png"
+      },
+      {
+        "degree": "Software Engineering (Web Development Specialization) (2025-Present)",
+        "school": "Santa Joaquina de Vedruna (Seville)",
+        "description": "Software engineering principles with a focus on web development, including front-end and back-end programming, databases, and agile methodologies.",
+        "image": "../public/vedruna.png"
+    }
+      
+    ], 
+    "skills": [
+      {
+        "name": "Java",
+        "image": "../public/java.png",
+        "level": 3
+  
+      },
+      {
+        "name": "HTML",
+        "image": "../public/html.png",
+        "level": 4
+      },
+      {
+        "name": "CSS",
+        "image": "../public/css.png",
+        "level": 3
+        
+      },
+      {
+        "name": "PHP",
+        "image": "../public/php.png",
+        "level": 2
+        
+      },
+      {
+        "name": "JavaScript",
+        "image": "../public/js.png",
+        "level": 4
+        
+      },
+      {
+        "name": "MySQL",
+        "image": "../public/mysql.png",
+        "level": 3
+        
+      }
+    
+    ],
+    "workExperience":[
+      {
+        "company": "McDonald's (2024-2025)",
+        "photo": "../public/mcdonalds.png",
+        "description": "Cashier, responsible for serving customers, processing payments, and keeping the register area organized; cook, etc."
+      },
+      {
+        "company": "PCcomponentes (2025-2027)",
+        "photo": "../public/pccomponentes.png",
+        "description": "Specialized in creating the visual part of the website or application, working with HTML, CSS, JavaScript, and frameworks like React or Angular."
+      },
+      {
+        "company": "Amazon (2027-2030)",
+        "photo": "../public/amazon.png",
+        "description": "Web Developer or Software Engineer, creating and improving tools for its e-commerce platform."
+      },
+      {
+        "company": "Epic Games (2030-Present)",
+        "photo": "../public/epic-games.png",
+        "description": "Web Developer creating and maintaining their official website and online store."
+      }
+    ],
+    "references": [
+      {
+        "name": "Joaquín Borrego Fernández",
+        "relationship": "Teacher",
+        "profession": "Software Developer",
+        "photo": "../public/foto-joaquin.jpg",
+        "description": "“Santi was an absolute pleasure to teach, and I’m confident he’ll excel in his career. He’re the kind of developer you can rely on to handle a project from start to finish with skill and dedication.”"
+      },
+      {
+        "name": "José Carlos Moreno Martín",
+        "relationship": "Teacher",
+        "profession": "Software Developer",
+        "photo": "../public/foto-josecarlos.png",
+        "description": "“Santi was an absolute pleasure to teach, and I’m confident he’ll excel in his career. He’re the kind of developer you can rely on to handle a project from start to finish with skill and dedication.”"
+      }
+    ]
+    
+  }
+  
