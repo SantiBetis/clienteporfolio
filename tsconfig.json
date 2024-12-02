@@ -1,0 +1,13 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "react",                     // Esto habilita JSX en archivos .tsx
+    "moduleResolution": "node",          // Resuelve módulos al estilo Node.js
+    "esModuleInterop": true,             // Permite la interoperabilidad con módulos ES
+    "skipLibCheck": true,                // Salta la verificación de tipos en archivos de librerías
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*"                           // Incluye todos los archivos TypeScript en la carpeta src
+  ]
+}

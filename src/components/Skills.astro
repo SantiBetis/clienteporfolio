@@ -1,0 +1,36 @@
+---
+const skills = [
+  { name: "Java", image: "../public/java.png", level: 2 },      // 2 rectángulos rellenos
+  { name: "HTML", image: "../public/html.png", level: 3 },      // 3 rectángulos rellenos
+  { name: "CSS", image: "../public/css.png", level: 3 },        // 3 rectángulos rellenos
+  { name: "PHP", image: "../public/php.png", level: 2 },        // 2 rectángulos rellenos
+  { name: "JavaScript", image: "../public/js.png", level: 2 },  // 2 rectángulos rellenos
+  { name: "MySQL", image: "../public/mysql.png", level: 2 },    // 2 rectángulos rellenos
+];
+---
+
+<section id="skills" class="bg-[#e8e5d7] min-h-screen flex flex-col items-center">
+  <h2 class="text-[#0B5E4F] text-4xl font-bold mb-12">SKILLS</h2>
+  <!-- Cuadro verde contenedor con 3 columnas y 2 filas, con espacio mínimo entre las filas -->
+  <div class="bg-[#0B5E4F] rounded-2xl grid grid-cols-3 gap-px max-w-full justify-center items-center w-[800px] h-[250px]">
+    {skills.map((skill) => (
+      <div class="flex items-center bg-transparent rounded-lg p-4 w-64 h-28 justify-center relative">
+        {/* Imagen del lenguaje al lado de la pila */}
+        <img src={skill.image} alt={skill.name} class="w-14 h-14 mr-4" />
+        {/* Pila con fondo beige y pequeños rectángulos de nivel */}
+        <div class="bg-[#e8e5d7] w-60 h-16 rounded-xl flex justify-between items-center border-2 border-[#0B5E4F]">
+          {/* Los 4 rectángulos de nivel */}
+          <div class="w-full h-12 bg-transparent flex justify-between items-center px-2">
+            {[...Array(4)].map((_, i) => (
+              <div
+                class={`w-1/5 h-full ${i < skill.level ? "bg-[#0B5E4F]" : "bg-[#e8e5d7] border-2 border-[#0B5E4F]"} rounded-md`}
+              ></div>
+            ))}
+          </div>
+        </div>
+        {/* Rectángulo verde pegado a la pila, sin bordes redondeados */}
+        <div class="absolute right-[10px] w-2 h-6 bg-[#e8e5d7]"></div>
+      </div>
+    ))}
+  </div>
+</section>

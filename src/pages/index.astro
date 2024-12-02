@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Studies from '../components/Studies.astro';
+import Skills from '../components/Skills.astro';
+import WorkExperience from '../components/WorkExperience.astro';
+import Projects from '../components/Projects';
+import References from '../components/References.astro';
+import ContactForm from '../components/ContactForm.tsx';
+
+// Modo de prueba (cambiar a false para producción)
+const testMode = true;
+
+const { searchParams } = new URL(Astro.request.url);
+const data = await import('../en.json');
+---
+
+<Layout>
+  <section id="aboutMe">
+  <AboutMe
+    name="Santiago Pérez Olivares"
+    photo="../public/foto-santi.png"
+    description="Hello! I'm Santiago Pérez Olivares, a second-year student specializing in Digital Design and Web Development. I am passionate about combining creativity and technology to create innovative digital experiences."
+    className=""  
+  />
+
+  <section id="studies" class="flex flex-col items-center mb-60"> 
+    <h2 class="text-[#0B5E4F] text-4xl font-bold text-center">STUDIES</h2>
+    <div class="flex flex-col items-center justify-center w-full max-w-xl ">
+      {data.studies.map((studies) => (
+        <Studies 
+          title={studies.degree}
+          school={studies.school}
+          description={studies.description}
+          className="mb-8"
+          imageSrc={studies.image}
+        />
+      ))}
+    </div>
+  </section>
+  
+
+  <section id="skills" class=" text-center"> 
+    <Skills />
+  </section>
+
+    <!-- Sección de Experiencias -->
+    <section id="work-experience" class="text-center mb-60 -mt-60">
+      <h2 class="text-[#0B5E4F] text-4xl font-bold mb-8">WORK EXPERIENCE</h2>
+      <div class="flex flex-col gap-8 justify-items-center">
+        {data.workExperience.map((experience) => (
+          <div class="flex justify-center w-full">
+            <WorkExperience
+              company={experience.company}
+              photo={experience.photo}
+              description={experience.description}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+
+
+
+  <!-- Sección de Proyectos -->
+  <section id="projects" class="text-center flex flex-col items-center mb-60">
+    <div class="flex flex-col gap-8">
+      <h2 class="text-[#0B5E4F] text-4xl font-bold mb-8">PROJECTS</h2>
+      <!-- Pasar testMode como prop al componente Projects -->
+      <Projects client:only="react" testMode={testMode} />
+    </div>
+  </section>
+
+
+  <!-- Sección de Referencias -->
+  <section id="references" class="flex flex-col items-center mb-60">
+    <h2 class="text-[#0B5E4F] text-4xl font-bold text-center">REFERENCES</h2>
+    <References references={data.references} />
+  </section>
+
+
+  <section id="contact" class="text-center -mb-80">
+    <h2 class="text-[#0B5E4F] text-4xl font-bold mb-16">CONTACT ME</h2>
+    <ContactForm client:only="react" />
+  </section>
+
+</Layout>

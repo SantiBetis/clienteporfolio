@@ -1,0 +1,20 @@
+---
+const { name, photo, description } = Astro.props;
+---
+
+<div class="flex items-center space-x-16 max-w-screen-xl mx-auto min-h-screen px-8">
+  <!-- Texto -->
+  <div class="flex-grow w-1/2">
+    <h1 class="text-4xl font-semibold mb-6 text-green-900">{name.toUpperCase()}</h1>
+    <p class="text-xl text-gray-700 mb-8">{description}</p>
+  </div>
+
+  <!-- Imagen -->
+  <div class="flex-shrink-0">
+    <img 
+      src={photo} 
+      alt={`Photo of ${name}`} 
+      class="w-80 h-80 rounded-full object-cover shadow-lg"
+    />
+  </div>
+</div>
