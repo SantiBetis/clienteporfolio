@@ -143,9 +143,7 @@ npm run build
 
 Esto ejecutará los comandos de Astro para comprobar y construir el proyecto en la carpeta dist/, que estará lista para ser desplegada.
 
-### Proyecto desplegado en Azure
 
-Puedes ver el proyecto desplegado en Azure a través de la URL: https://proud-desert-0f221e003.4.azurestaticapps.net
 
 *************************************************
 ## ENLACE A FIGMA
