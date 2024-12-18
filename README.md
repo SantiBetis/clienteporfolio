@@ -115,7 +115,7 @@ Filtro por tecnología usada en los proyectos.
    ```bash
    npm install
    ```
-    Esto instalara todas las dependencias necesarias para que el proyecto funcione correctamente.
+Esto instalará todas las dependencias necesarias para que el proyecto funcione correctamente.
    
 ---
 
