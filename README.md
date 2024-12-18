@@ -100,8 +100,8 @@ Filtro por tecnología usada en los proyectos.
 
 **1.** Clonar el repositorio:
 
-   ```bash
-    git clone https://github.com/SantiBetis/servidorporfolio.git   ```
+   ```
+    git clone https://github.com/SantiBetis/clienteporfolio.git   ```
 
 **2.** Navega al directorio del proyecto:
 
